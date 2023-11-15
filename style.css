@@ -71,7 +71,7 @@ form .grid-area div {
 }
 @media screen and (min-width: 700px) {
   form {
-    width: 45rem;
+    width: 37rem;
     padding: 2rem;
   }
   form .grid-area {
@@ -132,7 +132,7 @@ form #mensagge {
 }
 @media screen and (min-width: 700px) {
   form #mensagge {
-    height: 6rem;
+    height: 7rem;
   }
 }
 form #submitBtn {
