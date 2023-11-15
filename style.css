@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@100;200;300;400;500;600;700;800;900&display=swap");
+:root {
+  --buttonText: #4036A9;
+  --text: #111729;
+  --graytext: #CDD5E0;
+  --whiteText: #F8FAFC;
+}
+
+body {
+  background-image: url("images/bg-image.svg");
+  background-size: cover;
+  font-family: "Be Vietnam Pro", sans-serif;
+  color: var(--whiteText);
+  min-height: 100vh;
+}
+
+header img {
+  width: 4.5rem;
+  padding: 0.5rem 0;
+}
+@media screen and (min-width: 700px) {
+  header img {
+    width: 6rem;
+    padding: 0.5rem 3rem;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  main {
+    display: grid;
+    place-content: center;
+  }
+}
+
+.title {
+  text-align: center;
+  margin: 0.4rem;
+}
+@media screen and (min-width: 700px) {
+  .title {
+    margin: 0;
+  }
+}
+.title p {
+  font-size: 0.8rem;
+  margin-bottom: 3rem;
+}
+@media screen and (min-width: 700px) {
+  .title p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+  }
+}
+@media screen and (min-width: 700px) {
+  .title h1 {
+    font-size: 3rem;
+  }
+}
+
+form {
+  margin: 0.5rem;
+  padding: 1rem 1rem 3rem;
+  border-radius: 1rem;
+  background-color: rgba(246, 218, 255, 0.2431372549);
+  display: flex;
+  flex-direction: column;
+}
+form .grid-area div {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 700px) {
+  form {
+    width: 35rem;
+    padding: 1rem;
+  }
+  form .grid-area {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    -moz-column-gap: 0.5rem;
+         column-gap: 0.5rem;
+  }
+}
+form label {
+  font-size: 0.7rem;
+  margin-bottom: 0.2rem;
+}
+form input, form select, form textarea, form button {
+  border-radius: 0.5rem;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border: none;
+  box-shadow: 0.1rem 0.1rem 0.6rem var(--buttonText);
+  color: var(--text);
+  background-color: #FFFFFF;
+  font-weight: bold;
+  font-size: 0.6rem;
+}
+@media screen and (min-width: 700px) {
+  form input, form select, form textarea, form button {
+    padding: 1rem;
+    font-size: 0.8rem;
+  }
+}
+form input::-moz-placeholder, form select::-moz-placeholder, form textarea::-moz-placeholder, form button::-moz-placeholder {
+  color: var(--graytext);
+}
+form input::placeholder, form select::placeholder, form textarea::placeholder, form button::placeholder {
+  color: var(--graytext);
+}
+form input:focus, form select:focus, form textarea:focus, form button:focus {
+  outline: none;
+}
+form select {
+  /* Remove default arrow */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  /* Add custom arrow */
+  background-image: url("images/Expand_down.svg");
+  background-size: 1rem;
+  background-repeat: no-repeat;
+  background-position: right 4% center;
+  cursor: pointer;
+}
+form #mensagge {
+  resize: none;
+  height: 4rem;
+  font-weight: bold;
+  font-family: "Be Vietnam Pro", sans-serif;
+  font-size: 0.7rem;
+}
+@media screen and (min-width: 700px) {
+  form #mensagge {
+    height: 6rem;
+  }
+}
+form #submitBtn {
+  color: var(--buttonText);
+  font-weight: 700;
+}
+@media screen and (min-width: 700px) {
+  form #submitBtn {
+    font-size: 0.9rem;
+  }
+}
+form #submitBtn:hover {
+  color: #FFFFFF;
+  background: oklch(70% 0.2 200);
+  cursor: pointer;
+}
+
+footer {
+  padding: 0.5rem;
+  color: var(--graytext);
+  font-size: 0.7rem;
+  text-align: center;
+}
+footer a {
+  color: var(--graytext);
+  text-decoration: none;
+  font-weight: 600;
+}
+footer a:hover {
+  color: white;
+}/*# sourceMappingURL=style.css.map */

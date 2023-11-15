@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+$font: 'Be Vietnam Pro', sans-serif;
+
+:root {
+    --buttonText: #4036A9;
+    --text: #111729;
+    --graytext: #CDD5E0;
+    --whiteText: #F8FAFC;
+}
+
+@mixin desktop {
+    @media screen and (min-width: 700px) {
+        @content
+    }
+}
+
+body {
+    background-image: url('images/bg-image.svg');
+    background-size: cover;
+    font-family: $font;
+    color: var(--whiteText);
+    min-height: 100vh;
+}
+
+header img {
+    width: 4.5rem;
+    padding: .5rem 0;
+    @include desktop() {
+        width: 6rem;
+        padding: .5rem 3rem;
+    }
+}
+
+main {
+    @include desktop() {
+        display: grid;
+        place-content: center;
+    }
+}
+
+.title {
+    text-align: center;
+    margin: .4rem;
+    @include desktop() {
+        margin: 0;
+    }
+
+    p {
+        font-size: .8rem;
+        margin-bottom: 3rem;
+        @include desktop() {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+        }
+    }
+
+    h1 {
+        @include desktop() {
+            font-size: 3rem;
+        }
+    }
+    
+}
+
+
+form {
+    margin: .5rem;
+    padding: 1rem 1rem 3rem;
+    border-radius: 1rem;
+    background-color: #f6daff3e;
+    display: flex;
+    flex-direction: column;
+
+    .grid-area div {
+        display: flex;
+        flex-direction: column;
+    }
+
+    @include desktop() {
+        width: 35rem;
+        padding: 1rem;
+
+        .grid-area {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            column-gap: .5rem;
+        }
+    }
+
+    label {
+        font-size: .7rem;
+        margin-bottom: .2rem;
+    }
+
+    input, select, textarea, button {
+        border-radius: .5rem;
+        padding: .8rem;
+        margin-bottom: 1rem;
+        border: none;
+        box-shadow: .1rem .1rem .6rem var(--buttonText);
+        color: var(--text);
+        background-color: #FFFFFF;
+        font-weight: bold;
+        font-size: .6rem;
+        @include desktop() {
+            padding: 1rem;
+            font-size: .8rem;
+        }
+    
+        &::placeholder {
+            color: var(--graytext);
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    select {
+        /* Remove default arrow */
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        /* Add custom arrow */
+        background-image: url('images/Expand_down.svg');
+        background-size: 1rem;
+        background-repeat: no-repeat;
+        background-position: right 4% center;
+        cursor: pointer;
+    }
+    
+    #mensagge {
+        resize: none;
+        height: 4rem;
+        font-weight: bold;
+        font-family: $font;
+        font-size: .7rem;
+        @include desktop() {
+            height: 6rem;
+        }
+    }
+
+    #submitBtn {
+        color: var(--buttonText);
+        font-weight: 700;
+        @include desktop() {
+            font-size: .9rem;
+        }
+
+        &:hover {
+            color: #FFFFFF;
+            background: oklch(70% 0.2 200);
+            cursor: pointer;
+        }
+    }
+}
+
+
+footer {
+    padding: .5rem;
+    color: var(--graytext);
+    font-size: .7rem;
+    text-align: center;
+
+    a {
+        color: var(--graytext);
+        text-decoration: none;
+        font-weight: 600;
+
+        &:hover {
+            color: white;
+        }
+    }
+}

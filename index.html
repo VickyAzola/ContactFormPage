@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact page</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <header>
+        <img src="images/contact-form-icon.svg">
+    </header>
+
+    <main>
+        <div class="title">
+            <h1>Interested in our <br> business pricing?</h1>
+            <p>Fill out the form to view details and we’ll <br> contact you as soon as possible.</p>    
+        </div>
+
+        <form onsubmit="send(event)" name="contact" id="contact" autocomplete="on">
+        <div class="grid-area">
+            <div>
+                <label for="name">Name</label>
+                <input 
+                    aria-label="Enter your name, use letters only"
+                    id="name" 
+                    name="name" 
+                    type="text" 
+                    placeholder="Ethan Johnson"
+                    required
+                />
+            </div>
+            <div>
+                <label for="email">Company Email</label>
+                <input 
+                    aria-label="Enter your email"
+                    id="email" 
+                    name="email" 
+                    type="email" 
+                    placeholder="ethan@johnson.com"  
+                    pattern="/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/g" 
+                    required
+                />
+            </div>
+            <div>
+                <label for="companySize"> Company Size</label>
+                <select id="companySize" name="companySize" form_id="contact" required>
+                    <option value="0-50 Employees">0-50 Employees</option>
+                    <option value="50-100 Employees" selected>50-100 Employees</option>
+                    <option value="100-150 Employees">100-150 Employees</option>
+                    <option value="200+ Employees">200+ Employees</option>
+                </select>
+            </div>
+            <div>
+                <label for="subject"> Subject</label>
+                <select id="subject" name="subject" form_id="contact" required>
+                    <option value="Building Landing Pages" selected>Building Landing Pages</option>
+                    <option value="Building Forms">Building Forms</option>
+                    <option value="Create Profile">Create Profile</option>
+                </select>
+            </div>
+        </div>
+            <label for="mensagge">Mensagge</label>
+            <textarea id="mensagge" name="mensagge" maxlength="2000">50-100 Employees</textarea>
+            <button 
+                id="submitBtn" 
+                type="submit" 
+                value="Submit">
+                Contact Sales
+            </button>
+        </form>
+    </main>
+
+    <footer>
+        <p>
+            Challenge by <a  href="https://devchallenges.io/challenges" target="_blank">Dev Challenges</a>. 
+            Coded by <a href="" target="_blank">Victoria Azola</a>.
+        </p>
+    </footer>
+</body>
+
+<script>
+    function send(event) {
+        event.preventDefault()
+        return alert("Thanks, we will be in contact soon!")
+    }
+</script>
+
+</html>
